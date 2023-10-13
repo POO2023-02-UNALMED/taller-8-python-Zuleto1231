@@ -12,35 +12,32 @@ class Futbolista(Persona, Deportista):
         self._piernaHabil = piernaHabil
         Futbolista.listaFutbolistas.append(self)
         
-    def get_golesMarcados(self):
+    def getGolesMarcados(self):
         return self._golesMarcados
 
-    def set_golesMarcados(self, golesMarcados):
+    def setGolesMarcados(self, golesMarcados):
         self._golesMarcados = golesMarcados
 
-    def get_tarjetasRojas(self):
+    def getTarjetasRojas(self):
         return self._tarjetasRojas
 
-    def set_tarjetasRojas(self, tarjetasRojas):
+    def setTarjetasRojas(self, tarjetasRojas):
         self._tarjetasRojas = tarjetasRojas
 
-    def get_piernaHabil(self):
+    def getPiernaHabil(self):
         return self._piernaHabil
 
-    def set_piernaHabil(self, piernaHabil):
+    def setPiernaHabil(self, piernaHabil):
         self._piernaHabil = piernaHabil
         
     @classmethod
-    def get_listaFutbolistas(cls):
+    def getListaFutbolistas(cls):
         return cls.listaFutbolistas
 
     @classmethod
-    def set_listaFutbolistas(cls, lista):
+    def setListaFutbolistas(cls, lista):
         cls.listaFutbolistas = lista
         
     def __str__(self):
         return "Mi nombre es "+ self._nombre+ " soy profesional en el deporte "+self._deporte+ " Tengo "+ str(self._edad)+ " años de edad y llevo "+ str(self._añosPracticando)+" años en el deporte"    
         
-
-futbolista = Futbolista("Juan Pablo", 30, "1,80", "M", 12, 400, 1, "Derecha")
-print(futbolista)
